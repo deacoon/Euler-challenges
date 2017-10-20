@@ -12,6 +12,15 @@ def euler_challenge_003():
     return is_prime_divisor(product, 2)
 
 
+def is_prime(number):
+
+    for divisor in range(2, number):
+        if number % divisor != 0:
+            return False
+
+    return True
+
+
 def is_prime_divisor(product, divisor):
 
     for number in range(divisor+1, product):
