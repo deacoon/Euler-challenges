@@ -15,7 +15,7 @@ def euler_challenge_003():
 def is_prime(number):
 
     for divisor in range(2, number):
-        if number % divisor != 0:
+        if number % divisor == 0:
             return False
 
     return True
@@ -29,5 +29,5 @@ def is_prime_divisor(product, divisor):
                 return is_prime_divisor(int(product/number), number) 
     return product
 
-    
+
 print("solution:", euler_challenge_003())
